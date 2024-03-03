@@ -1,0 +1,13 @@
+/* colors.css */
+
+:root {
+  --black: #000000;
+  --black-placeholder: #403f4c;
+  --white: #ffffff;
+  --dark-shadeblue: #1c1c44;
+  --medium-shadeblue: #33337c;
+  --light-shadeblue: #4a4ab3;
+  --dark-tintblue: #5757ba;
+  --medium-tintblue: #9c9cd6;
+  --light-tintblue: #e2e2f3;
+}

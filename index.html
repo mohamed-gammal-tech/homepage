@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your E-commerce Site</title>
+    <link rel="stylesheet" href="path/to/colors.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    <script>
+      load("header.html");
+      function load(url) {
+        req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(1).innerHTML = req.responseText;
+      }
+    </script>
+    <main>
+      <section class="section1">
+        <h2>Products Categories</h2>
+        <div class="products">
+          <div class="product">
+            <img src="/img/t-shirt.jpg" alt="T-shirt" />
+            <h3>T-shirts</h3>
+          </div>
+          <div class="product">
+            <img src="/img/t-shirt.jpg" alt="T-shirt" />
+            <h3>T-shirts</h3>
+          </div>
+          <div class="product">
+            <img src="/img/t-shirt.jpg" alt="T-shirt" />
+            <h3>T-shirts</h3>
+          </div>
+
+          <!-- Repeat the above block for each product, with appropriate image paths and text -->
+        </div>
+      </section>
+      <section class="section1">
+        <h2>Products Categories</h2>
+        <div class="products">
+          <div class="product">
+            <img src="/img/t-shirt.jpg" alt="T-shirt" />
+            <h3>T-shirts</h3>
+          </div>
+          <div class="product">
+            <img src="/img/t-shirt.jpg" alt="T-shirt" />
+            <h3>T-shirts</h3>
+          </div>
+          <div class="product">
+            <img src="/img/t-shirt.jpg" alt="T-shirt" />
+            <h3>T-shirts</h3>
+          </div>
+
+          <!-- Repeat the above block for each product, with appropriate image paths and text -->
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <div id="4"></div>
+    <script>
+      load("footer.html");
+      function load(url) {
+        req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(4).innerHTML = req.responseText;
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
