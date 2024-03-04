@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Printavio</title>
+    <!-- favicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="/css/header.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- MAIN CONTAINER -->
+        <div id="container">
+          <div id="side-nav-wrapper" style="display: none">
+            <ul class="side-nav">
+              <li><a href="#home">Home</a></li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="closebtn"
+                  onclick="closeNav()"
+                  >&times;</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="side-menu-icon">
+            <span
+              style="font-size: 30px; cursor: pointer"
+              onclick="toggleSideNav()"
+              >&#9776;</span
+            >
+          </div>
+          <!-- SHOP NAME -->
+          <div id="shoplogo">
+            <a href="index.html"><img src="img/logo.png" /></a>
+          </div>
+
+          <!-- SEARCH nav -->
+          <div id="search">
+            <input
+              type="text"
+              id="input"
+              name="searchBox"
+              placeholder="    Search for Clothing and Accessories"
+            />
+            <i class="fas fa-search search"></i>
+          </div>
+          <!-- USER nav (CART AND USER ICON) -->
+          <div id="user">
+            <a href="#"> Sell </a>
+
+            <a href="#">
+              <span class="material-symbols-outlined"> person</span>
+            </a>
+            <a id="car-icon" href="#">
+              <span class="material-symbols-outlined"> shopping_cart </span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <script>
+      function toggleSideNav() {
+        var x = document.getElementById("side-nav-wrapper");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function openNav() {
+        document.getElementById("side-nav-wrapper").style.display = "block";
+        document.addEventListener("click", closeNavOutside);
+      }
+
+      function closeNav() {
+        document.getElementById("side-nav-wrapper").style.display = "none";
+        document.removeEventListener("click", closeNavOutside);
+      }
+
+      function closeNavOutside(event) {
+        let sideNav = document.getElementById("side-nav-wrapper");
+        if (event.target !== sideNav && !sideNav.contains(event.target)) {
+          closeNav();
+        }
+      }
+    </script>
+  </body>
+</html>

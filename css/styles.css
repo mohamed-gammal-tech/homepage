@@ -28,6 +28,7 @@ header {
   --light-tintblue: #e2e2f3;
 }
 
+
 .main {
   padding: 20px;
 }
@@ -68,4 +69,74 @@ header {
 .products h3 {
   font-size: 24px;
   color: var(--dark-shadeblue);
+}
+
+/* Base styles are already defined, so we'll add media queries for responsiveness */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .product {
+    width: 30%; /* You might want to keep this for larger screens */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section1 h2 {
+    font-size: 28px; /* Slightly smaller font size */
+  }
+
+  .product {
+    width: 45%; /* Increase width for tablet screens */
+  }
+
+  .product img {
+    width: 100%; /* Full width images on tablets */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .products h3 {
+    font-size: 22px; /* Adjust font size */
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .section1 h2 {
+    font-size: 24px; /* Smaller font size for small devices */
+  }
+
+  .product {
+    width: 100%; /* Full width products on small devices */
+  }
+
+  .product img {
+    width: 90%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .products h3 {
+    font-size: 20px; /* Adjust font size */
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+  .section1 h2 {
+    font-size: 20px; /* Even smaller font size for very small devices */
+  }
+
+  .product {
+    width: 100%; /* Full width products */
+    padding: 5px; /* Reduce padding */
+  }
+
+  .product img {
+    width: 100%; /* Full width images */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .products h3 {
+    font-size: 18px; /* Adjust font size */
+  }
 }

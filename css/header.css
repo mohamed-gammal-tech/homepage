@@ -25,6 +25,57 @@ body {
   font-size: 40px;
 }
 
+/* Side Navigation Menu Style */
+.side-nav {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: var(--dark-shadeblue);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* The navigation menu links */
+.side-nav a {
+  width: 100%;
+  color: var(--light-tintblue);
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+
+.side-nav a:hover {
+  background-color: var(--light-tintblue);
+  color: var(--dark-shadeblue);
+  border-radius: 20px;
+  width: 25vb;
+}
+.side-nav .closebtn {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 1px;
+  font-size: 36px;
+  margin-left: 100px;
+  color: var(--white);
+}
+
+/* Optional: Add this if you want a fade-in effect on the side-nav */
+#side-nav-wrapper {
+  transition: 0.5s; /* Fades in the side-nav */
+}
+.side-menu-icon {
+  color: var(--light-tintblue);
+  display: none;
+}
+
 #container {
   background-color: var(--dark-shadeblue);
   margin: auto;
@@ -32,7 +83,7 @@ body {
   width: 100%;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1.5fr 5fr 5fr;
+  grid-template-columns: 1fr 6fr 2fr;
   font-family: "Lato", sans-serif;
   z-index: 1;
   justify-content: space-between;
@@ -68,7 +119,7 @@ body {
 .search {
   padding: 6px 6px;
   color: var(--dark-shadeblue);
-  min-width: 40px;
+  min-width: 50px;
   text-align: center;
   position: absolute;
   top: 25px;
@@ -106,7 +157,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 40px;
 }
 #user a {
@@ -128,6 +179,7 @@ body {
   border-radius: 20px;
 }
 
+.side-nav a:active,
 #user a:active {
   border: 4px solid var(--medium-shadeblue);
   border-radius: 20px;
@@ -204,9 +256,33 @@ body {
     font-size: 30px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 530px) {
+  #shoplogo {
+    width: 90px;
+  }
+  #car-icon {
+    position: absolute;
+  }
   #container {
-    padding: 20px 25px;
+    padding: 20px 5px;
+  }
+  .side-menu-icon {
+    display: block;
+  }
+  #user a {
+    display: none;
+  }
+  #user {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 40px;
+  }
+
+  #user #car-icon {
+    display: block;
+    padding-bottom: 0px;
   }
 }
 
